@@ -4,27 +4,42 @@ import java.util.ArrayList;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        School vancouver = new School("Vancouver Secondary","Vancouver, BC", "604-123-1234");
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println("===Add 3 teachers===");
+        vancouver.addTeacher("Steve", "Mac", "Programming");
+        vancouver.addTeacher("Charles","Dickson", "English");
+        vancouver.addTeacher("Tiffany","Kim", "Chemistry");
 
-        School vancouver = new School("Killarney Secondary","Vancouver, BC", "604-123-1234");
-
-        vancouver.addTeacher("Bill", "Gate", "Programming");
-        vancouver.addTeacher("William","Shakespere", "English");
 
         vancouver.showTeacher();
-        vancouver.addStudent("Ariel", "Cheung", 11);
-        vancouver.addStudent("Justin", "Cheung", 12);
-        vancouver.showStudent();
 
+        System.out.println("===Add 10 students===");
+        vancouver.addStudent("Ariel", "Cheung", 11);
+        vancouver.addStudent("Jasmine", "Watson", 11);
+        vancouver.addStudent("Justin", "Job", 11);
+        vancouver.addStudent("Anson", "White", 11);
+        vancouver.addStudent("Sophia", "Stone", 11);
+        vancouver.addStudent("Olivia","Lee",12);
+        vancouver.addStudent("Emma", "Wood", 12);
+        vancouver.addStudent("Jeremy","Chan",12);
+        vancouver.addStudent("William","Grant",12);
+        vancouver.addStudent("Ryan","Hunt", 12);
+
+
+        vancouver.showStudent();
+        System.out.println();
+        System.out.println("---Remove 1 teacher---");
+        vancouver.removeTeacher("Charles","Dickson","English");
+        //System.out.println("---Show list of teachers---");
+        vancouver.showTeacher();
+
+        System.out.println("---Remove 2 students---");
+        //vancouver.removeStudent("Ariel","Cheung",11,1);
+        vancouver.removeStudent("Ryan","Hunt",12,10);
+        vancouver.removeStudent("Anson","White",11,4);
+        //System.out.println("---Show list of students---");
+        vancouver.showStudent();
     }
 }

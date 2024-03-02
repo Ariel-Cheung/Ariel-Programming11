@@ -22,6 +22,33 @@ public class School {
         students.add(new Student(firstname,lastname, grade));
     }
 
+    public void removeTeacher(String firstname, String lastname, String subject) {
+        int index = -1;
+        for (int i = 0; i < teachers.size(); i++) {
+            if (teachers.get(i).getFirstName().equals(firstname) && teachers.get(i).getLastName().equals(lastname)
+                    && teachers.get(i).getSubject().equals(subject)) {
+                index = i;
+            }
+        }
+        if (index != -1) {
+            teachers.remove(index);
+        }
+    }
+
+
+    public void removeStudent(String firstname, String lastname, int grade, int studentnum) {
+        int index = -1;
+        for (int i = 0; i < students.size(); i++) {
+            if (students.get(i).getFirstName().equals(firstname) && students.get(i).getLastName().equals(lastname)
+                    && students.get(i).getGrade() == grade && students.get(i).getStudentNum() == studentnum) {
+                index = i;
+            }
+        }
+        if (index != -1) {
+            students.remove(index);
+        }
+    }
+
     public void showTeacher() {
         for (int i = 0; i < teachers.size(); i++) {
             System.out.println(teachers.get(i));

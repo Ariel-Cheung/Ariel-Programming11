@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Student {
 
     private String firstName;
@@ -52,4 +54,5 @@ public class Student {
     public String toString() {
         return ("Name: " + firstName + " " + lastName + " Student Number: " + studentNum);
     }
+
 }
