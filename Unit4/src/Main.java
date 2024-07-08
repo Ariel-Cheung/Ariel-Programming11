@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
 
@@ -36,10 +35,10 @@ public class Main {
         vancouver.showTeacher();
 
         System.out.println("---Remove 2 students---");
-        //vancouver.removeStudent("Ariel","Cheung",11,1);
+
         vancouver.removeStudent("Ryan","Hunt",12,10);
         vancouver.removeStudent("Anson","White",11,4);
-        //System.out.println("---Show list of students---");
+
         vancouver.showStudent();
     }
 }
